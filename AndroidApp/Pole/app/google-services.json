@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "705438501889",
+    "firebase_url": "https://hackathonpoleapp.firebaseio.com",
+    "project_id": "hackathonpoleapp",
+    "storage_bucket": "hackathonpoleapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:705438501889:android:70572e3ae782c745",
+        "android_client_info": {
+          "package_name": "com.nitin.pole"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "705438501889-0a02j9ju17o95koocg3vktjrm77n697i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO_zRu7Uln5DQcX6hxl9juBwvU5jknLjw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

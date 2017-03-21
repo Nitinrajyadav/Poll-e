@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nitin.pole.views.SurveyDetailsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:theme="?popupTheme">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_survey"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorAccent"
+            android:titleTextColor="@color/white"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:titleTextColor="@color/white"
+            tools:title="fgfgfgfgfg" />
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:cardBackgroundColor="@color/cardview_light_background"
+                app:cardCornerRadius="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:background="@color/colorAccent"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+
+                    <TextView
+                        android:id="@+id/tv_survey_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|start"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        tools:text="Some survey text that is very  Some survey text  is very long Some survey text that is very long Some survey text that is very long " />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|start"
+                            android:text="From :"
+                            android:textAppearance="?attr/textAppearanceListItem"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_survey_from"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|end"
+                            android:textColor="@color/colorNegative"
+                            android:textSize="12sp"
+                            tools:text="Voting Servay" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|start"
+                            android:text="Date :"
+                            android:textAppearance="?attr/textAppearanceListItem"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_survey_date"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|end"
+                            android:textColor="@color/colorNegative"
+                            android:textSize="12sp"
+                            tools:text="11/11/1111" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <ListView
+                android:id="@+id/list_questions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:listSelector="@drawable/list_selector"
+                tools:listitem="@layout/item_multi_choice" />
+
+            <TextView
+                android:id="@+id/tv_seek_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="5/10"
+                android:textColor="@color/colorAccent"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <SeekBar
+                android:id="@+id/progressBar2"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:max="10"
+                android:padding="16dp"
+                android:progress="5"
+                android:visibility="gone" />
+
+
+            <com.nitin.pole.views.helper.PieChart
+                android:id="@+id/pie"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.v7.widget.ButtonBarLayout
+        android:id="@+id/button_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
+        android:background="@color/cardview_light_background"
+        android:elevation="4dp"
+        android:padding="4dp">
+
+        <Button
+            android:id="@+id/action_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@color/colorNegative"
+            android:elevation="2dp"
+            android:text="Cancel"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/action_submit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:elevation="2dp"
+            android:text="@string/action_submit"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/white" />
+    </android.support.v7.widget.ButtonBarLayout>
+</android.support.design.widget.CoordinatorLayout>
